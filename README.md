@@ -2,7 +2,7 @@
 A space tracker made to track all satellites infromation, live locations and orbits.
 
 # Introduction
-Now, more than ever, private and public space exploration companies such Space-X, NASA, and Blue Origin are sending out rockets. Equipped with all kinds of exploration and science payloads, the increase in launches has made it ever hard for the space enthusiasts to keep up to date. To address this, today, I would like to introduce you to Orbipedia: A space track website that allows you to search space payloads and show their live location. 
+Now, more than ever, private and public space exploration companies such Space-X, NASA, and Blue Origin are sending out rockets. Equipped with all kinds of exploration and science payloads, the increase in launches has made it ever hard for the space enthusiasts to keep up to date. To address this, today, I would like to introduce you to [Orbipedia](https://github.com/JaniniRami/Orbipedia): A space track website that allows you to search space payloads and show their live location. 
 <br>
 ![Orbipedia Home](https://github.com/JaniniRami/Orbipedia/blob/main/imgs/1.png?raw=true)
 <br>
