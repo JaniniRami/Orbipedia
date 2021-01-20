@@ -4,9 +4,9 @@ A space tracker made to track all satellites infromation, live locations and orb
 # Introduction
 Now, more than ever, private and public space exploration companies such Space-X, NASA, and Blue Origin are sending out rockets. Equipped with all kinds of exploration and science payloads, the increase in launches has made it ever hard for the space enthusiasts to keep up to date. To address this, today, I would like to introduce you to Orbipedia: A space track website that allows you to search space payloads and show their live location. 
 <br>
-![Orbipedia Home](https://github.com/JaniniRami/Orbipedia/blob/main/img/1.png?raw=true)
+![Orbipedia Home](https://github.com/JaniniRami/Orbipedia/blob/main/imgs/1.png?raw=true)
 <br>
-![Orbipedia Map](https://github.com/JaniniRami/Orbipedia/blob/main/img/2.png?raw=true)
+![Orbipedia Map](https://github.com/JaniniRami/Orbipedia/blob/main/imgs/2.png?raw=true)
 # Setup Instructions
 - Head to [space-track](https://www.space-track.org) and make an account.
 - Clone Orbipedia: ```git clone https://github.com/JaniniRami/Orbipedia```.
