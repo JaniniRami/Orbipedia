@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Orbipedia - Error</title>
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/errors.css') }}">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  </head>
+  <body>
+
+
+<div class="notfound">
+    <div class="centered"><span class="inverted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;</div>
+    <div class="centered"><span class="inverted">&nbsp;4&nbsp;0&nbsp;4&nbsp;</span><span class="shadow">&nbsp;</span></div>
+    <div class="centered"><span class="inverted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="shadow">&nbsp;</span></div>
+    <div class="centered">&nbsp;<span class="shadow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+    <div class="row">&nbsp;</div>
+    <div class="row">A fatal exception 404 has occurred at C0DE:ABAD1DEA in 0x0000007B.</div>
+    <div class="row">The current request will be terminated.</div>
+    <div class="row">&nbsp;</div>
+    <div class="row">* Press any key to return to the previous page.</div>
+    <div class="row">* Press CTRL+ALT+DEL to restart your computer. You will</div>
+    <div class="row">&nbsp;&nbsp;lose any unsaved information in all applications.</div>
+    <div class="row">&nbsp;</div>
+    <div class="centered"><a>Press ENTER key to continue...</a><span class="blink">&#9608;</span></div>
+
+</div>
+
+<script type="text/javascript">
+$(document).keyup(function(event) {
+if (event.which === 13) {
+  window.location.href = "/";
+}
+});
+</script>
+  </body>
+</html>

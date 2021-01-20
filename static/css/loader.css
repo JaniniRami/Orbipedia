@@ -1,0 +1,58 @@
+svg {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  justify-content: center;
+  filter:  brightness(0) invert(1);
+}
+
+.rect {
+  fill: none;
+  stroke-width: 8px;
+  stroke: black;
+  stroke-dasharray: 40;
+  stroke-dashoffset: 50%;
+  -webkit-animation: movedash 1.5s forwards 0s infinite;
+          animation: movedash 1.5s forwards 0s infinite;
+}
+
+@-webkit-keyframes movedash {
+  to {
+    stroke-dashoffset: 250%;
+  }
+}
+
+@keyframes movedash {
+  to {
+    stroke-dashoffset: 250%;
+  }
+}
+
+
+.d-flex {
+  display: absolute;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-items-center {
+      align-items: center;
+}
+
+.vertical-center {
+  position: absolute;
+
+  left: 50%;
+
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+
+  padding: 10px;
+}

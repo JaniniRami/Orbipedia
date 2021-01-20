@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+@font-face {
+    font-family: 'type_writerregular';
+    src: url('../fonts//type_writer-webfont.woff2') format('woff2'),
+         url('../fonts/type_writer-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    background: #0d1117;
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+.title{
+  padding-top: 50px;
+  color: white;
+  font-family: 'type_writerregular';
+}
+
+.navbar{
+  background-color: #161b22;
+  font-family: 'type_writerregular';
+}
+
+form{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+    width: 500px;
+    cursor: pointer;
+}
+
+input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.fa{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+
+}
+
+
+form input{
+    display: block;
+}
+
+.ui-autocomplete {
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+    float: left;
+    display: none;
+    min-width: 160px;
+    padding: 4px 0;
+    margin: 0 0 10px 25px;
+    list-style: none;
+    background-color: #ffffff;
+    border-color: #ccc;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-style: solid;
+    border-width: 1px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    *border-right-width: 2px;
+    *border-bottom-width: 2px;
+}
+
+.lead { position: absolute;
+   clear: both;
+   width: 100%;
+   height: 100%;
+   float: left;
+   left no-repeat; }
+
+.col-lg-12 {
+  padding-top: 70px;
+}
+
+
+
+.card {
+    width: 500px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+}
+
+
+.btn-primary {
+    background-color: #5878FF !important;
+    border-radius: 7px;
+    font-family: 'type_writerregular';
+}
+
+.container {
+  width: 1140px;
+}
+
+#map {height: 92%}
+
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #161b22;
+}
+
+.satturn{
+  width :100px;
+  height : 100px;
+}
+
+.rounded{
+  width : 400px;
+  height: 400px;
+}
+
+.display-5{
+  color: white;
+  text-align: center;
+}
+
+svg {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  justify-content: center;
+  filter:  brightness(0) invert(1);
+}
+
+.rect {
+  fill: none;
+  stroke-width: 8px;
+  stroke: black;
+  stroke-dasharray: 40;
+  stroke-dashoffset: 50%;
+  -webkit-animation: movedash 1.5s forwards 0s infinite;
+          animation: movedash 1.5s forwards 0s infinite;
+}
+
+@-webkit-keyframes movedash {
+  to {
+    stroke-dashoffset: 250%;
+  }
+}
+
+@keyframes movedash {
+  to {
+    stroke-dashoffset: 250%;
+  }
+}
+
+
+.d-flex {
+  display: absolute;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-items-center {
+      align-items: center;
+}
+
+.vertical-center {
+  position: absolute;
+
+  left: 50%;
+
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+
+  padding: 10px;
+}
+
+
+.about{
+  width: 50%;
+}
+
+.about-title {
+  padding-top: 50px;
+  color: white;
+  font-family: 'type_writerregular';
+}
+
+.about-paragraph{
+  color: white;
+}
