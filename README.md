@@ -8,7 +8,7 @@ Now, more than ever, private and public space exploration companies such Space-X
 <br>
 ![Orbipedia Map](https://github.com/JaniniRami/Orbipedia/blob/main/imgs/2.png?raw=true)
 # Setup Instructions
-- Head to [space-track](https://www.space-track.org) and make an account.
+- Head to [space-track](https://www.space-track.org) and create an account.
 - Clone Orbipedia: ```git clone https://github.com/JaniniRami/Orbipedia```.
 - Enter your space track credentials in <b>credentials.py</b> file.
 - Install the requirements for Orbipedia: ```python3 -m pip install -r requirements.txt```.
