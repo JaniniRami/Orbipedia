@@ -1,13 +1,16 @@
 {% extends 'layout.html' %}
 {%block title %}Orbipedia - Map {% endblock %}
-
+{%block head %}
+<script src="https://kit.fontawesome.com/11594dbfbf.js" crossorigin="anonymous"></script>
+{% endblock %}
 {%block body %}
 
+<div id="particles-js"></div>
 
 <div class="about container">
-  <h3 class = 'about-title text-center'>About</h1>
-  <p class = 'about-paragraph  text-center'>Author: Rami Janini</p>
-
-
+  <h3 class="about-title text-center">About</h3>
+  <p class="about-paragraph  text-center">Now, more than ever, private and public space exploration companies such Space-X, NASA, and Blue Origin are sending out rockets. Equipped with all kinds of exploration and science payloads, the increase in launches has made it ever hard for the space enthusiasts to keep up to date. To address this, today, I would like to introduce you to Orbipedia: A space track website that allows you to search space payloads and show their live location. </p>
+  <p class="about-paragraph  text-center">Orbipedia uses python flask library to retrieve data from the space-track API, clean and process the data, and sends it to the front end website. After doing so, the front end processes the TLE lines of the selected space object and uses satellite.js library to decode the TLE lines and show the live location of the selected space object and the orbit of it. In order to visually display the object’s live location, Open Layers maps are used.</p>
+  <p class="about-paragraph  text-center">Author: Rami Janini</p>
 </div>
 {% endblock %}

@@ -11,7 +11,7 @@
 
 
 {%block body %}
-
+<div id="particles-js"></div>
 <div class="alert alert-danger" role="alert" id="danger-alert" style="display: none">
   <strong>Error!</strong>
  Cannot find satellite name or ID submitted.
@@ -38,58 +38,58 @@
     <div class="row">
     <div class="col-xl-3">
       <ul class="list-group">
-        <li class='list-group-item'>Norad ID:  <span id="NORAD_CAT_ID"></span></li>
-        <li class='list-group-item'>Satellite name:  <span id="SATNAME"></span></li>
-        <li class='list-group-item'>INTLDES:  <span id="INTLDES"></span></li>
-        <li class='list-group-item'>Object type:  <span id="OBJECT_TYPE"></span></li>
-        <li class='list-group-item'>Country:  <span id="COUNTRY"></span></li>
-        <li class='list-group-item'>Launch date:  <span id="LAUNCH"></span></li>
+        <li class='list-group-item'>Norad ID:  <span id="NORAD_CAT_ID">Undefined</span></li>
+        <li class='list-group-item'>Satellite name:  <span id="SATNAME">Undefined</span></li>
+        <li class='list-group-item'>INTLDES:  <span id="INTLDES">Undefined</span></li>
+        <li class='list-group-item'>Object type:  <span id="OBJECT_TYPE">Undefined</span></li>
+        <li class='list-group-item'>Country:  <span id="COUNTRY">Undefined</span></li>
+        <li class='list-group-item'>Launch date:  <span id="LAUNCH">Undefined</span></li>
       </ul>
     </div>
 
     <div class="col-xl-3">
       <ul class="list-group">
-        <li class='list-group-item'>Site:  <span id="SITE"></span></li>
-        <li class='list-group-item'>Decay date:  <span id="DECAY"></span></li>
-        <li class='list-group-item'>Period:  <span id="PERIOD"></span></li>
-        <li class='list-group-item'>Inclination:  <span id="INCLINATION"></span></li>
-        <li class='list-group-item'>Apogee:  <span id="APOGEE"></span></li>
-        <li class='list-group-item'>Perigee:  <span id="PERIGEE"></span></li>
+        <li class='list-group-item'>Site:  <span id="SITE">Undefined</span></li>
+        <li class='list-group-item'>Decay date:  <span id="DECAY">Undefined</span></li>
+        <li class='list-group-item'>Period:  <span id="PERIOD">Undefined</span></li>
+        <li class='list-group-item'>Inclination:  <span id="INCLINATION">Undefined</span></li>
+        <li class='list-group-item'>Apogee:  <span id="APOGEE">Undefined</span></li>
+        <li class='list-group-item'>Perigee:  <span id="PERIGEE">Undefined</span></li>
       </ul>
     </div>
 
     <div class="col-xl-3">
       <ul class="list-group">
-        <li class='list-group-item'>Comment:  <span id="COMMENT"></span></li>
-        <li class='list-group-item'>Comment code:  <span id="COMMENTCODE"></span></li>
-        <li class='list-group-item'>RCS value:  <span id="RCSVALUE"></span></li>
-        <li class='list-group-item'>RCS size:  <span id="RCS_SIZE"></span></li>
-        <li class='list-group-item'>File:  <span id="FILE"></span></li>
-        <li class='list-group-item'>Launch year:  <span id="LAUNCH_YEAR"></span></li>
+        <li class='list-group-item'>Comment:  <span id="COMMENT">Undefined</span></li>
+        <li class='list-group-item'>Comment code:  <span id="COMMENTCODE">Undefined</span></li>
+        <li class='list-group-item'>RCS value:  <span id="RCSVALUE">Undefined</span></li>
+        <li class='list-group-item'>RCS size:  <span id="RCS_SIZE">Undefined</span></li>
+        <li class='list-group-item'>File:  <span id="FILE">Undefined</span></li>
+        <li class='list-group-item'>Launch year:  <span id="LAUNCH_YEAR">Undefined</span></li>
       </ul>
     </div>
 
     <div class="col-xl-3">
       <ul class="list-group">
-        <li class='list-group-item'>Launch number:  <span id="LAUNCH_NUM"></span></li>
-        <li class='list-group-item'>Launch piece:  <span id="LAUNCH_PIECE"></span></li>
-        <li class='list-group-item'>Current:  <span id="CURRENT"></span></li>
-        <li class='list-group-item'>Object name:  <span id="OBJECT_NAME"></span></li>
-        <li class='list-group-item'>Object ID:  <span id="OBJECT_ID"></span></li>
-        <li class='list-group-item'>Object number:  <span id="OBJECT_NUMBER"></span></li>
+        <li class='list-group-item'>Launch number:  <span id="LAUNCH_NUM">Undefined</span></li>
+        <li class='list-group-item'>Launch piece:  <span id="LAUNCH_PIECE">Undefined</span></li>
+        <li class='list-group-item'>Current:  <span id="CURRENT">Undefined</span></li>
+        <li class='list-group-item'>Object name:  <span id="OBJECT_NAME">Undefined</span></li>
+        <li class='list-group-item'>Object ID:  <span id="OBJECT_ID">Undefined</span></li>
+        <li class='list-group-item'>Object number:  <span id="OBJECT_NUMBER">Undefined</span></li>
       </ul>
     </div>
 </div>
 
 
-<button id="openMap" type="button" class="btn btn-primary btn-lg btn-block" style = 'margin-top: 20px;'>Show satellite live location on map.</button>
+<button id="openMap" type="button" class="btn btn-primary btn-lg btn-block">Show satellite live location on map.</button>
 </div>
 
 <script type="text/javascript">
   $('#openMap').click(function() {
     id = document.getElementById('NORAD_CAT_ID').innerText;
     console.log(id);
-    window.location='map/' + id;
+    window.location='map?id=' + id;
   });
 </script>
 
@@ -167,6 +167,5 @@ $(function() {
 
 
 </script>
-
 
   {% endblock %}

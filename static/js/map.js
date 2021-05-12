@@ -13,7 +13,14 @@ var map = drawMap();
 var shadow = drawShadow();
 
 var orbit = drawOrbit(points);
-var interval = setInterval(locationInterval, 1000);
+var locationInterval_ = setInterval(locationInterval, 1000);
+// var orbitInterval_ = setInterval(orbitInterval, 3000)
+
+// function orbitInterval(){
+//   console.log('Updated Orbit.')
+//   predPoints(tle1, tle2);
+//   drawOrbit(points);
+// }
 
 function locationInterval(){
   current_position = processTLE(tle1, tle2);
@@ -29,8 +36,10 @@ function locationInterval(){
 // Getting live location using TLE lines.
 function processTLE(tle1, tle2){
   satrec = satellite.twoline2satrec(tle1, tle2);
-
   positionAndVelocity = satellite.propagate(satrec, new Date());
+  est = new Date().toLocaleString('en-US', { timeZone: 'America/New_York' ,  hour: '2-digit', minute: "2-digit", second: "2-digit"} );
+  document.getElementById('time-est').innerHTML = est
+  document.getElementById('date').innerHTML = new Date().toDateString()
   positionEci = positionAndVelocity.position;
 
   gmst = satellite.gstime(new Date());
@@ -38,11 +47,13 @@ function processTLE(tle1, tle2){
   // Converting ECI coordinates to geodetic coordinates
   positionGd = satellite.eciToGeodetic(positionEci, gmst);
 
+  altitude = positionGd.height;
   longitude = positionGd.longitude;
   latitude  = positionGd.latitude;
   longitudeStr = satellite.degreesLong(longitude);
   latitudeStr  = satellite.degreesLat(latitude);
-
+  document.getElementById('longitude').innerHTML = longitudeStr;
+  document.getElementById('latitude').innerHTML = latitudeStr;
 
   if (isNaN(longitudeStr) == false || isNaN(latitudeStr) == false){
     return [longitudeStr, latitudeStr];
@@ -136,17 +147,16 @@ function drawShadow(){
 function drawOrbit(points){
   var vector_source = new ol.source.Vector();
   vector_source.addFeature(createFeature(points));
-
-  var vectorLayer = new ol.layer.Vector({
-  source: vector_source,
-  style: new ol.style.Style({
-    stroke: new ol.style.Stroke({
-      width: 4,
-      color: '#1357be'
+    var orbitLayer = new ol.layer.Vector({
+    source: vector_source,
+    style: new ol.style.Style({
+      stroke: new ol.style.Stroke({
+        width: 4,
+        color: '#1357be'
+      })
     })
-  })
-});
-map.addLayer(vectorLayer)
+  });
+  map.addLayer(orbitLayer)
 }
 
 function createFeature(points) {
@@ -205,7 +215,6 @@ function drawMap(){
         layers: [
             new ol.layer.Tile({
               source: new ol.source.OSM({
-                url:'http://{a-c}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'
               })
             }),
           ],

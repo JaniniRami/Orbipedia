@@ -60,13 +60,17 @@ def autocomplete():
     autocomplete_data = generate_autocomplete_data(data)
     return Response(json.dumps(autocomplete_data), mimetype='application/json')
 
-@app.route('/map/<norad_id>')
-def map(norad_id):
+@app.route('/map')
+def map():
+    norad_id = request.args.get('id', None)
     tle_data = search_tle_data(data, downloads_path, norad_id, current_date)
+    sat_name = search_cat_data(data, downloads_path, current_date, norad_id)['SATNAME']
+    print(sat_name)
+    print(tle_data)
     if tle_data == None:
         return render_template('errors/404.html', error_comment = 'The satellite have decayed or is not available.')
     else:
-        return render_template('map.html', tle1 = tle_data['TLE_1'], tle2 = tle_data['TLE_2'])
+        return render_template('map.html', tle1 = tle_data['TLE_1'], tle2 = tle_data['TLE_2'], norad_id = norad_id, sat_name = sat_name)
 
 
 @app.route('/about')

@@ -10,13 +10,31 @@
   <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
+  <script src="https://kit.fontawesome.com/11594dbfbf.js" crossorigin="anonymous"></script>
 
 {% endblock %}
 {%block body %}
 
 
+  <div class="info-box">
+    <ul >
+      <li>Date <span id='date'>Undefined</span></li>
+      <li>Time (EST) <span id='time-est'>Undefined</span></li>
+    </ul>
+    <ul style='position:fixed;'>
+      <li>Longitude <span id='longitude'>Undefined</span></li>
+      <li>Latitude <span id='latitude'>Undefined</span></li>
+    </ul>
+    <ul style='margin-left: 19%'>
+      <li>TLE-1 <span =>{{tle1}}</span></li>
+      <li>TLE-2 <span =>{{tle2}}</span></li>
+    </ul>
 
+    <ul class='sat-info'>
+      <li>Sat Name <span id='sat-name'>{{sat_name}}</span></li>
+      <li>NORAD ID <span id='sat-id'>{{norad_id}}</span></li>
+    </ul>
+  </div>
   <span id = "tle1" style="display: none">{{tle1}}</span>
   <span id = "tle2" style="display: none">{{tle2}}</span>
   <div class="alert alert-danger" role="alert" id="danger-alert" style="display: none">
